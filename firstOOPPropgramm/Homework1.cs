@@ -20,5 +20,10 @@ namespace FirstOOPPropgramm
             }
             return task;
         }
+        public static int GetSolution(int a, int b)
+        {
+            int res = (5 * a + b * b) / (b - a);
+            return res;
+        }
     }
 }
