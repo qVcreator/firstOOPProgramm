@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("firstOOPPropgramm")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("FirstOOPPropgramm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("firstOOPPropgramm")]
-[assembly: System.Reflection.AssemblyTitleAttribute("firstOOPPropgramm")]
+[assembly: System.Reflection.AssemblyProductAttribute("FirstOOPPropgramm")]
+[assembly: System.Reflection.AssemblyTitleAttribute("FirstOOPPropgramm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.

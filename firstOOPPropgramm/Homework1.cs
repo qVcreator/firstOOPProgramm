@@ -31,5 +31,34 @@ namespace FirstOOPPropgramm
             int res = (c - b) / a;
             return res;
         }
+
+        public static string GetEquationOfStraightLine(int x1, int y1,int x2,int y2)
+        {
+            double tmp1 = (double)(y1 - y2) / (x2 - x1);
+            double tmp2 = (double)((y2 - y1) * x1) / (x2 - x1);
+            tmp1 *= -1;
+            tmp2 += -1;
+
+            string res = "";
+
+            if (tmp2 == 0 && tmp1 == 0)
+            {
+                res = "Y = 0";
+            }
+            else if (tmp2 == 0)
+            {
+                res = $"Y = {tmp1}X";
+            }
+            else if (tmp1 == 0)
+            {
+                res = $"Y = {tmp2}";
+            }
+            else
+            {
+                res = $"Y = {tmp1}x + {tmp2}";
+            }
+
+            return res;
+        }
     }
 }

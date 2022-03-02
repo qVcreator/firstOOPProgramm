@@ -37,6 +37,23 @@ while (isKeepWork == true)
 
         actualTask = FirstOOPPropgramm.Homework1.ChooseTask();
     }
+    else if (actualTask == "1.5")
+    {
+        Console.Write("Введите число X1: ");
+        int x1 = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Введите число Y1: ");
+        int y1 = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Введите число X2: ");
+        int x2 = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Введите число Y2: ");
+        int y2 = Convert.ToInt32(Console.ReadLine());
+
+        string resHomework1_5 = FirstOOPPropgramm.Homework1.GetEquationOfStraightLine(x1, y1, x2, y2);
+
+        Console.WriteLine($"Answer is {resHomework1_5}");
+
+        actualTask = FirstOOPPropgramm.Homework1.ChooseTask();
+    }
     else if (actualTask == "repeat")
     {
         actualTask = FirstOOPPropgramm.Homework1.ChooseTask();
