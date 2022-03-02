@@ -25,5 +25,11 @@ namespace FirstOOPPropgramm
             int res = (5 * a + b * b) / (b - a);
             return res;
         }
+
+        public static int GetSolveOfLinearEquation(int a, int b, int c)
+        {
+            int res = (c - b) / a;
+            return res;
+        }
     }
 }
