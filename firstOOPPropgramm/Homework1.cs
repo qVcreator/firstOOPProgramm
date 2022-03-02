@@ -11,7 +11,7 @@ namespace FirstOOPPropgramm
         public static string ChooseTask()
         {
             Console.WriteLine("Choose homework and task");
-            Console.WriteLine("Example: to reach first task of first homework type 1.1");
+            Console.WriteLine("Example: to reach first task of second homework type {number of homework}.{number of task} (2.1)");
             Console.Write("Type here: ");
             string task = Console.ReadLine();
             if (task == "")
@@ -58,6 +58,51 @@ namespace FirstOOPPropgramm
                 res = $"Y = {tmp1}x + {tmp2}";
             }
 
+            return res;
+        }
+    }
+
+    static class Homework2
+    {
+        public static int IfBoolDoMath(int a, int b)
+        {
+            int res = 0;
+
+            if (a > b)
+            {
+                res = a + b;
+            }
+            else if (a == b)
+            {
+                res = a * b;
+            }
+            else if (a < b)
+            {
+                res = a - b;
+            }
+
+            return res;
+        }
+        public static string WhichQuarter(int x, int y)
+        {
+            string res = "";
+
+            if (x > 0 && y > 0)
+            {
+                res = "Точка в 1-ой четверти";
+            }
+            else if (x < 0 && y > 0)
+            {
+                res = "Точка в 2-ой четверти";
+            }
+            else if (x < 0 && y < 0)
+            {
+                res = "Точка в 3-ой четверти";
+            }
+            else if (x > 0 && y < 0)
+            {
+                res = "Точка в 4-ой четверти";
+            }
             return res;
         }
     }

@@ -54,6 +54,32 @@ while (isKeepWork == true)
 
         actualTask = FirstOOPPropgramm.Homework1.ChooseTask();
     }
+    else if (actualTask == "2.1")
+    {
+        Console.Write("Введите число а: ");
+        int a = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Введите число b: ");
+        int b = Convert.ToInt32(Console.ReadLine());
+
+        int resHomework2_1 = FirstOOPPropgramm.Homework2.IfBoolDoMath(a, b);
+
+        Console.WriteLine($"The result is {resHomework2_1}");
+
+        actualTask = FirstOOPPropgramm.Homework1.ChooseTask();
+    }
+    else if (actualTask == "2.2")
+    {
+        Console.Write("Введите число x: ");
+        int x = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Введите число y: ");
+        int y = Convert.ToInt32(Console.ReadLine());
+
+        string resHomework2_2 = FirstOOPPropgramm.Homework2.WhichQuarter(x, y);
+
+        Console.WriteLine(resHomework2_2);
+
+        actualTask = FirstOOPPropgramm.Homework1.ChooseTask();
+    }
     else if (actualTask == "repeat")
     {
         actualTask = FirstOOPPropgramm.Homework1.ChooseTask();
