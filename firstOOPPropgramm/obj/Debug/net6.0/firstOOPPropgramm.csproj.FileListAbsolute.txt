@@ -1,0 +1,15 @@
+C:\Users\Тимур\source\repos\firstOOPProgramm\firstOOPPropgramm\bin\Debug\net6.0\firstOOPPropgramm.exe
+C:\Users\Тимур\source\repos\firstOOPProgramm\firstOOPPropgramm\bin\Debug\net6.0\firstOOPPropgramm.deps.json
+C:\Users\Тимур\source\repos\firstOOPProgramm\firstOOPPropgramm\bin\Debug\net6.0\firstOOPPropgramm.runtimeconfig.json
+C:\Users\Тимур\source\repos\firstOOPProgramm\firstOOPPropgramm\bin\Debug\net6.0\firstOOPPropgramm.dll
+C:\Users\Тимур\source\repos\firstOOPProgramm\firstOOPPropgramm\bin\Debug\net6.0\firstOOPPropgramm.pdb
+C:\Users\Тимур\source\repos\firstOOPProgramm\firstOOPPropgramm\obj\Debug\net6.0\firstOOPPropgramm.csproj.AssemblyReference.cache
+C:\Users\Тимур\source\repos\firstOOPProgramm\firstOOPPropgramm\obj\Debug\net6.0\firstOOPPropgramm.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Тимур\source\repos\firstOOPProgramm\firstOOPPropgramm\obj\Debug\net6.0\firstOOPPropgramm.AssemblyInfoInputs.cache
+C:\Users\Тимур\source\repos\firstOOPProgramm\firstOOPPropgramm\obj\Debug\net6.0\firstOOPPropgramm.AssemblyInfo.cs
+C:\Users\Тимур\source\repos\firstOOPProgramm\firstOOPPropgramm\obj\Debug\net6.0\firstOOPPropgramm.csproj.CoreCompileInputs.cache
+C:\Users\Тимур\source\repos\firstOOPProgramm\firstOOPPropgramm\obj\Debug\net6.0\firstOOPPropgramm.dll
+C:\Users\Тимур\source\repos\firstOOPProgramm\firstOOPPropgramm\obj\Debug\net6.0\refint\firstOOPPropgramm.dll
+C:\Users\Тимур\source\repos\firstOOPProgramm\firstOOPPropgramm\obj\Debug\net6.0\firstOOPPropgramm.pdb
+C:\Users\Тимур\source\repos\firstOOPProgramm\firstOOPPropgramm\obj\Debug\net6.0\firstOOPPropgramm.genruntimeconfig.cache
+C:\Users\Тимур\source\repos\firstOOPProgramm\firstOOPPropgramm\obj\Debug\net6.0\ref\firstOOPPropgramm.dll
