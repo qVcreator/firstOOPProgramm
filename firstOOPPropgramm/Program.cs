@@ -80,6 +80,17 @@ while (isKeepWork == true)
 
         actualTask = FirstOOPPropgramm.Homework1.ChooseTask();
     }
+    else if (actualTask == "2.5")
+    {
+        Console.Write("Введите число: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+
+        string stringifiedNum = FirstOOPPropgramm.Homework2.StringifyNum(num);
+
+        Console.WriteLine(stringifiedNum);
+
+        actualTask = FirstOOPPropgramm.Homework1.ChooseTask();
+    }
     else if (actualTask == "repeat")
     {
         actualTask = FirstOOPPropgramm.Homework1.ChooseTask();
