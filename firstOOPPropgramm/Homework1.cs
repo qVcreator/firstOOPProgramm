@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FirstOOPPropgramm
 {
-    static class Homework1
+    static class UserInterface
     {
         public static string ChooseTask()
         {
@@ -20,6 +20,9 @@ namespace FirstOOPPropgramm
             }
             return task;
         }
+    }
+    static class Homework1
+    {
         public static int GetSolution(int a, int b)
         {
             int res = (5 * a + b * b) / (b - a);

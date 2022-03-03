@@ -1,6 +1,6 @@
 ﻿using FirstOOPPropgramm;
 
-string actualTask = FirstOOPPropgramm.Homework1.ChooseTask();
+string actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
 bool isKeepWork = true;
 
 while (isKeepWork == true)
@@ -20,7 +20,7 @@ while (isKeepWork == true)
 
         Console.WriteLine($"Solution is {resHomework1_2}");
 
-        actualTask = FirstOOPPropgramm.Homework1.ChooseTask();
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
     else if (actualTask == "1.4")
     {
@@ -35,7 +35,7 @@ while (isKeepWork == true)
 
         Console.WriteLine($"Solution is {resHomework1_4}");
 
-        actualTask = FirstOOPPropgramm.Homework1.ChooseTask();
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
     else if (actualTask == "1.5")
     {
@@ -52,7 +52,7 @@ while (isKeepWork == true)
 
         Console.WriteLine($"Answer is {resHomework1_5}");
 
-        actualTask = FirstOOPPropgramm.Homework1.ChooseTask();
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
     else if (actualTask == "2.1")
     {
@@ -65,7 +65,7 @@ while (isKeepWork == true)
 
         Console.WriteLine($"The result is {resHomework2_1}");
 
-        actualTask = FirstOOPPropgramm.Homework1.ChooseTask();
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
     else if (actualTask == "2.2")
     {
@@ -78,7 +78,7 @@ while (isKeepWork == true)
 
         Console.WriteLine(resHomework2_2);
 
-        actualTask = FirstOOPPropgramm.Homework1.ChooseTask();
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
     else if (actualTask == "2.5")
     {
@@ -89,16 +89,16 @@ while (isKeepWork == true)
 
         Console.WriteLine(stringifiedNum);
 
-        actualTask = FirstOOPPropgramm.Homework1.ChooseTask();
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
     else if (actualTask == "repeat")
     {
-        actualTask = FirstOOPPropgramm.Homework1.ChooseTask();
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
     else if (actualTask == "clear")
     {
         Console.Clear();
-        actualTask = FirstOOPPropgramm.Homework1.ChooseTask();
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
 }
 
