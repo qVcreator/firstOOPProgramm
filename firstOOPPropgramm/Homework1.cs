@@ -313,5 +313,34 @@ namespace FirstOOPPropgramm
 
             return res;
         }
+        public static string IsNumbersHaveSameDigit(int num1, int num2)
+        {
+            string res = "НЕТ";
+
+            if (num2 > num1)
+            {
+                int change = num1;
+                num1 = num2;
+                num2 = change;
+
+            }
+
+            while (num1 != 0)
+            {
+                int temp1 = num1 % 10;
+                do
+                {
+                    int temp2 = num2 % 10;
+                    if (temp1 == temp2)
+                    {
+                        res = "ДА";
+                    }
+                    num2 /= 10;
+                }while (num2 != 0);
+                num1 /= 10;
+            }
+
+            return res;
+        }
     }
 }
