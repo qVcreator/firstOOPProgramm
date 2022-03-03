@@ -264,5 +264,54 @@ namespace FirstOOPPropgramm
             }
             return num1;
         }
+        public static int GetNumByHalfDevisionMethod(int num)
+        {
+            int res = 0;
+            int leftNum = 0;
+            int rightNum = num;
+
+            do
+            {
+                res = (leftNum + rightNum) / 2;
+                if (Math.Pow(res, 3) < num)
+                {
+                    leftNum = res;
+                }
+                else
+                {
+                    rightNum = res;
+                }
+            } while (Math.Pow(res, 3) != num);
+
+            return res;
+        }
+        public static int FindQuantityOddNumbers(int num)
+        {
+            int сounter = 0;
+
+            while (num != 0)
+            {
+                if (!(((num % 10) % 2) == 0))
+                {
+                    сounter += 1;
+                }
+                num /= 10;
+            }
+
+            return сounter;
+        }
+        public static int GetReverseNum(int num)
+        {
+            int res = 0;
+
+            while (num != 0)
+            {
+                res *= 10;
+                res += num % 10;
+                num /= 10;
+            }
+
+            return res;
+        }
     }
 }

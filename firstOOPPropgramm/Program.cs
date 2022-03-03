@@ -152,14 +152,47 @@ while (isKeepWork == true)
     }
     else if (actualTask == "3.7")
     {
-        Console.Write("Введите число 1-ое число: ");
+        Console.Write("Введите 1-ое число: ");
         int num1 = Math.Abs(Convert.ToInt32(Console.ReadLine()));
-        Console.Write("Введите число 2-ое число: ");
+        Console.Write("Введите 2-ое число: ");
         int num2 = Math.Abs(Convert.ToInt32(Console.ReadLine()));
 
         int res = FirstOOPPropgramm.Homework3.GetСommonDivisorOfTwoNumbersByEuclidsAlgoritm(num1, num2);
 
         Console.WriteLine(res);
+
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
+    }
+    else if (actualTask == "3.8")
+    {
+        Console.Write("Введите число: ");
+        int num = Math.Abs(Convert.ToInt32(Console.ReadLine()));
+
+        int resNum = FirstOOPPropgramm.Homework3.GetNumByHalfDevisionMethod(num);
+
+        Console.WriteLine(resNum);
+
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
+    }
+    else if (actualTask == "3.9")
+    {
+        Console.Write("Введите число: ");
+        int num = Math.Abs(Convert.ToInt32(Console.ReadLine()));
+
+        int quantityOdd = FirstOOPPropgramm.Homework3.FindQuantityOddNumbers(num);
+
+        Console.WriteLine(quantityOdd);
+
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
+    }
+    else if (actualTask == "3.10")
+    {
+        Console.Write("Введите число: ");
+        int num = Math.Abs(Convert.ToInt32(Console.ReadLine()));
+
+        int MirrorNum = FirstOOPPropgramm.Homework3.GetReverseNum(num);
+
+        Console.WriteLine(MirrorNum);
 
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
