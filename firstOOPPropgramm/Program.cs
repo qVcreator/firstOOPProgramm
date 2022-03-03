@@ -139,6 +139,17 @@ while (isKeepWork == true)
 
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
+    else if (actualTask == "3.6")
+    {
+        Console.Write("Введите число: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+
+        int fibonacciNum = FirstOOPPropgramm.Homework3.GetNumberOfFibonacciSeries(num);
+
+        Console.WriteLine(fibonacciNum);
+
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
+    }
     else if (actualTask == "repeat")
     {
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();

@@ -231,5 +231,23 @@ namespace FirstOOPPropgramm
             }
             return summ;
         }
+        public static int GetNumberOfFibonacciSeries(int num)
+        {
+            int firstFibonacciNum = 1;
+            int secondFibonacciNum= 1; 
+            int actualFibonacciNum =  1;
+            
+            int counter = 2;
+
+            while (counter < num)
+            {
+                actualFibonacciNum = firstFibonacciNum + secondFibonacciNum;
+                firstFibonacciNum = secondFibonacciNum;
+                secondFibonacciNum = actualFibonacciNum;
+                                
+                counter++;
+            }
+            return actualFibonacciNum;
+        }
     }
 }
