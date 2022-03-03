@@ -17,6 +17,7 @@ namespace FirstOOPPropgramm
             if (task == "")
             {
                 task = "repeat";
+                Console.Beep();
             }
             return task;
         }
@@ -190,6 +191,18 @@ namespace FirstOOPPropgramm
             }
 
             return res;        
+        }
+
+        public static int FindLessThanSqureOfNum(int a)
+        {
+            int check = 1;
+            int count = 0;
+            while (check*check < a)
+            {
+                check++;
+
+            }
+            return check;
         }
     }
 }

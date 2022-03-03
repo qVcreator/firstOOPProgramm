@@ -9,7 +9,7 @@ while (isKeepWork == true)
     {
         isKeepWork = false;
     }
-    else if (actualTask == "1.2")
+    else if (actualTask == "1.2")   
     {
         Console.Write("Введите число а: ");
         int a = Convert.ToInt32(Console.ReadLine());
@@ -101,6 +101,17 @@ while (isKeepWork == true)
         int numInDegree = FirstOOPPropgramm.Homework3.AscensionToTheDegree(a, b);
 
         Console.WriteLine(numInDegree);
+
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
+    }
+    else if (actualTask == "3.3")
+    {
+        Console.Write("Введите число a: ");
+        int a = Convert.ToInt32(Console.ReadLine());
+
+        int counterOfLessNum = FirstOOPPropgramm.Homework3.FindLessThanSqureOfNum(a);
+
+        Console.WriteLine(counterOfLessNum);
 
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
