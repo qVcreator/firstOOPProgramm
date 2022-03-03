@@ -148,6 +148,19 @@ while (isKeepWork == true)
 
         Console.WriteLine(fibonacciNum);
 
+        
+    }
+    else if (actualTask == "3.7")
+    {
+        Console.Write("Введите число 1-ое число: ");
+        int num1 = Math.Abs(Convert.ToInt32(Console.ReadLine()));
+        Console.Write("Введите число 2-ое число: ");
+        int num2 = Math.Abs(Convert.ToInt32(Console.ReadLine()));
+
+        int res = FirstOOPPropgramm.Homework3.GetСommonDivisorOfTwoNumbersByEuclidsAlgoritm(num1, num2);
+
+        Console.WriteLine(res);
+
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
     else if (actualTask == "repeat")
