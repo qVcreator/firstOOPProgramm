@@ -172,4 +172,24 @@ namespace FirstOOPPropgramm
             return res;
         }
     }
+    static class Homework3
+    {
+        public static int AscensionToTheDegree(int a, int b)
+        {
+            int res = 1;
+            if (b == 0)
+            {
+                res = 1;
+            }
+            else
+            {
+                for (int i = 0; i < b; i++)
+                {
+                    res *= a;
+                }
+            }
+
+            return res;        
+        }
+    }
 }

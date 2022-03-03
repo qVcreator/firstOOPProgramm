@@ -91,6 +91,19 @@ while (isKeepWork == true)
 
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
+    else if (actualTask == "3.1")
+    {
+        Console.Write("Введите число a: ");
+        int a = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Введите число b: ");
+        int b = Convert.ToInt32(Console.ReadLine());
+
+        int numInDegree = FirstOOPPropgramm.Homework3.AscensionToTheDegree(a, b);
+
+        Console.WriteLine(numInDegree);
+
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
+    }
     else if (actualTask == "repeat")
     {
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
