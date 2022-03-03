@@ -126,6 +126,19 @@ while (isKeepWork == true)
 
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
+    else if (actualTask == "3.5")
+    {
+        Console.Write("Введите число a: ");
+        int a = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Введите число b: ");
+        int b = Convert.ToInt32(Console.ReadLine());
+
+        int summOfNumsWhichDevidesBySeven = FirstOOPPropgramm.Homework3.GetSummInRangeOfNumbersWhichDevidesBySeven(a, b);
+
+        Console.WriteLine(summOfNumsWhichDevidesBySeven);
+
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
+    }
     else if (actualTask == "repeat")
     {
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();

@@ -211,5 +211,25 @@ namespace FirstOOPPropgramm
             }
             return devider;
         }
+        public static int GetSummInRangeOfNumbersWhichDevidesBySeven(int a, int b)
+        {
+            int summ = 0;
+
+            if (b > a)
+            {
+                int change = b;
+                b = a;
+                a = change;
+            }
+            while (b <= a)
+            {
+                if (b % 7 == 0)
+                {
+                    summ += b;
+                }
+                b++;
+            }
+            return summ;
+        }
     }
 }
