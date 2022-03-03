@@ -115,6 +115,17 @@ while (isKeepWork == true)
 
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
+    else if (actualTask == "3.4")
+    {
+        Console.Write("Введите число a: ");
+        int a = Convert.ToInt32(Console.ReadLine());
+
+        int biggestDevider = FirstOOPPropgramm.Homework3.FindTheBiggestDevider(a);
+
+        Console.WriteLine(biggestDevider);
+
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
+    }
     else if (actualTask == "repeat")
     {
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();

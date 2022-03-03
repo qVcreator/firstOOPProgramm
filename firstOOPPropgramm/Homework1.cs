@@ -196,13 +196,20 @@ namespace FirstOOPPropgramm
         public static int FindLessThanSqureOfNum(int a)
         {
             int check = 1;
-            int count = 0;
             while (check*check < a)
             {
                 check++;
-
             }
             return check;
+        }
+        public static int FindTheBiggestDevider(int a)
+        {
+            int devider = a - 1;
+            while (a%devider != 0)
+            {
+                devider--;  
+            }
+            return devider;
         }
     }
 }
