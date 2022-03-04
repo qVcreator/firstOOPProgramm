@@ -315,9 +315,9 @@ namespace FirstOOPPropgramm
 
             return res;
         }
-        public static string IsNumbersHaveSameDigit(int num1, int num2)
+        public static bool IsNumbersHaveSameDigit(int num1, int num2)
         {
-            string res = "НЕТ";
+            bool res = false;
 
             if (num2 > num1)
             {
@@ -335,7 +335,7 @@ namespace FirstOOPPropgramm
                     int temp2 = num2 % 10;
                     if (temp1 == temp2)
                     {
-                        res = "ДА";
+                        res = true;
                     }
                     num2 /= 10;
                 }while (num2 != 0);

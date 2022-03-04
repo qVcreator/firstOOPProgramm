@@ -219,9 +219,20 @@ while (isKeepWork == true)
         Console.Write("Введите 2-ое число: ");
         int num2 = Math.Abs(Convert.ToInt32(Console.ReadLine()));
 
-        string isSame = FirstOOPPropgramm.Homework3.IsNumbersHaveSameDigit(num1, num2);
+        bool isSame = FirstOOPPropgramm.Homework3.IsNumbersHaveSameDigit(num1, num2);
 
-        Console.WriteLine(isSame);
+        string res = "";
+
+        if (isSame == true)
+        {
+            res = "ДА";
+        }
+        else
+        {
+            res = "НЕТ";
+        }
+
+        Console.WriteLine(res);
 
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
