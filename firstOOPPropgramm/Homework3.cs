@@ -196,5 +196,35 @@ namespace FirstOOPPropgramm
                 Console.WriteLine(item);
             }
         }
+
+        public static int[] GetNumbersInDiaposonFromOneToChoosenNumWhereSumOfEvenMoreThanSumOfOdd(int num)
+        {
+            int[] arr = { };
+            int tmp1 = 1;
+            while (tmp1 <= num)
+            {
+                int even = 0;
+                int odd = 0;
+                int tmp2 = tmp1;
+                while (tmp2 != 0)
+                {
+                    if (tmp2 % 2 == 0)
+                    {
+                        even += tmp2 % 10;
+                    }
+                    else
+                    {
+                        odd += tmp2 % 10;
+                    }
+                    tmp2 /= 10;
+                }
+                if (even > odd)
+                {
+                    arr.Append(tmp1);
+                }
+                tmp1++;
+            }
+            return arr;
+        }
     }
 }
