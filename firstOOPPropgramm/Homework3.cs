@@ -10,6 +10,10 @@ namespace FirstOOPPropgramm
     {
         public static int AscensionToTheDegree(int a, int b)
         {
+            if (b < 0)
+            {
+                throw new Exception("<b> can't be less than zero");
+            }
             int res = 1;
             if (b == 0)
             {
@@ -38,6 +42,10 @@ namespace FirstOOPPropgramm
         public static int FindTheBiggestDevider(int a)
         {
             int devider = a - 1;
+            if (devider == 0)
+            {
+                throw new Exception("devider can't be zero");
+            }
             while (a % devider != 0)
             {
                 devider--;
@@ -50,9 +58,7 @@ namespace FirstOOPPropgramm
 
             if (b > a)
             {
-                int change = b;
-                b = a;
-                a = change;
+                Homework1.SwapNums(ref a,ref b);
             }
             while (b <= a)
             {
@@ -66,6 +72,10 @@ namespace FirstOOPPropgramm
         }
         public static int GetNumberOfFibonacciSeries(int num)
         {
+            if (num <= 0)
+            {
+                throw new Exception("Num have to be more than zero");
+            }
             int firstFibonacciNum = 1;
             int secondFibonacciNum = 1;
             int actualFibonacciNum = 1;
@@ -152,9 +162,7 @@ namespace FirstOOPPropgramm
 
             if (num2 > num1)
             {
-                int change = num1;
-                num1 = num2;
-                num2 = change;
+                Homework1.SwapNums(ref num1, ref num2);
 
             }
 
@@ -179,7 +187,7 @@ namespace FirstOOPPropgramm
         {
             if (num < 1 || num > 1000)
             {
-                throw new Exception("Number is not in diaposon");
+                throw new Exception("Number is not in range");
             }
             int[] arrayOfNum = { };
             for (int i = num; i < 1000; i += num)
@@ -197,7 +205,7 @@ namespace FirstOOPPropgramm
             }
         }
 
-        public static int[] GetNumbersInDiaposonFromOneToChoosenNumWhereSumOfEvenMoreThanSumOfOdd(int num)
+        public static int[] GetNumbersInRangeFromOneToChoosenNumWhereSumOfEvenMoreThanSumOfOdd(int num)
         {
             int[] arr = { };
             int tmp1 = 1;

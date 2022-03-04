@@ -314,7 +314,7 @@ while (isKeepWork == true)
         Console.Write("Введите число: ");
         int num = Math.Abs(Convert.ToInt32(Console.ReadLine()));
 
-        int[] arrayOfNums = FirstOOPPropgramm.Homework3.GetNumbersInDiaposonFromOneToChoosenNumWhereSumOfEvenMoreThanSumOfOdd(num);
+        int[] arrayOfNums = FirstOOPPropgramm.Homework3.GetNumbersInRangeFromOneToChoosenNumWhereSumOfEvenMoreThanSumOfOdd(num);
         FirstOOPPropgramm.Homework3.WriteAllElementsInIntArray(arrayOfNums);
 
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();

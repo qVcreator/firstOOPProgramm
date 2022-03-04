@@ -98,5 +98,11 @@ namespace FirstOOPPropgramm
             a = b;
             b = swap;
         }
+        public static void SwapNums(ref int a, ref int b)
+        {
+            int swap = a;
+            a = b;
+            b = swap;
+        }
     }
 }
