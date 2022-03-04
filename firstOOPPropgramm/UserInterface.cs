@@ -23,5 +23,15 @@ namespace FirstOOPPropgramm
             }
             return task;
         }
+
+        public static bool IsZero(int a)
+        {
+            bool res = false;
+            if (a == 0)
+            {
+                res = true;
+            }
+            return res;
+        }
     }
 }
