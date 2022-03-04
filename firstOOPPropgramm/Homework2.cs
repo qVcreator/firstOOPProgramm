@@ -31,7 +31,11 @@ namespace FirstOOPPropgramm
         {
             string res = "";
 
-            if (x > 0 && y > 0)
+            if (x == 0 || y == 0)
+            {
+                throw new Exception("It's Impossible to define quarter because x or y are equals zero");
+            }
+            else if (x > 0 && y > 0)
             {
                 res = "Точка в 1-ой четверти";
             }
@@ -56,12 +60,15 @@ namespace FirstOOPPropgramm
             string secondWord = "";
             string res = "";
 
+            if ((num > -9 && num < 9) || (num < -99 && num > 99))
+            {
+                throw new Exception("Number is not in raange");
+            }
             if (num < 0)
             {
                 num *= -1;
                 isMinus = "Минус ";
             }
-
             if (num < 20)
             {
                 switch (num)
@@ -157,20 +164,48 @@ namespace FirstOOPPropgramm
 
         public static double FindFirstResultOfQuadraticEquationIfDiscriminantIsMoreThanZero(int a, int b, double dis)
         {
-            return ((-1 * b) + Math.Sqrt(dis)) / (2 * a);
+            if (a == 0)
+            {
+                throw new Exception("<a> can't be equals zero");
+            }
+            else
+            {
+                return ((-1 * b) + Math.Sqrt(dis)) / (2 * a);
+            }
         }
         public static double FindSecondResultOfQuadraticEquationIfDiscriminantIsMoreThanZero(int a, int b, double dis)
         {
-            return ((-1 * b) - Math.Sqrt(dis)) / (2 * a);
+            if (a == 0)
+            {
+                throw new Exception("<a> can't be equals zero");
+            }
+            else
+            {
+                return ((-1 * b) - Math.Sqrt(dis)) / (2 * a);
+            }
         }
         public static double FindResultOfQuadraticEquationIfDiscriminantIsEqualZero(int a, int b)
         {
-            return (-1 * b) / (2 * a);
+            if (a == 0)
+            {
+                throw new Exception("<a> can't be zero");
+            }
+            else
+            {
+                return (-1 * b) / (2 * a);
+            }
         }
 
         public static double FindDiscriminant(int a, int b, int c)
         {
-            return b * b - 4 * a * c;
+            if ((b * b - 4 * a * c) < 0)
+            {
+                throw new Exception("Discriminant can't be zero");
+            }
+            else
+            {
+                return b * b - 4 * a * c;
+            }
         }
     }
 }
