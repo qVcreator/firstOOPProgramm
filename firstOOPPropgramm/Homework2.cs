@@ -112,5 +112,47 @@ namespace FirstOOPPropgramm
             }
             return res;
         }
+        public static void GetFromLessToBiggest(int a, int b, int c, out int o1, out int o2, out int o3)
+        {
+            o1 = 0;
+            o2 = 0;
+            o3 = 0;
+            if ((a >= b && a >= c) && (b >= c))
+            {
+                o1 = c;
+                o2 = b;
+                o3 = a;
+            }
+            else if ((a >= b && a >= c) && (c >= b))
+            {
+                o1 = b;
+                o2 = c;
+                o3 = a;
+            }
+            else if ((b >= a && b >= c) && (a >= c))
+            {
+                o1 = c;
+                o2 = a;
+                o3 = b;
+            }
+            else if ((b >= a && b >= c) && (c >= a))
+            {
+                o1 = a;
+                o2 = c;
+                o3 = b;
+            }
+            else if ((c >= a && c >= b) && (a >= b))
+            {
+                o1 = b;
+                o2 = a;
+                o3 = c;
+            }
+            else if ((c >= a && c >= b) && (b >= a))
+            {
+                o1 = a;
+                o2 = b;
+                o3 = c;
+            }
+        }
     }
 }
