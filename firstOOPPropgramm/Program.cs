@@ -159,7 +159,7 @@ while (isKeepWork == true)
 
         Console.WriteLine(fibonacciNum);
 
-        
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
     else if (actualTask == "3.7")
     {
