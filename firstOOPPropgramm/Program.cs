@@ -48,6 +48,18 @@ while (isKeepWork == true)
 
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
+    else if (actualTask == "1.3")
+    {
+        Console.WriteLine("Пользователь вводит 2 строковых(string) значения(A и B). Поменяйте содержимое переменных A и B местами.");
+        Console.Write("Введите 1-ую строку: ");
+        string a = Console.ReadLine();
+        Console.Write("Введите 2-ую строку: ");
+        string  b = Console.ReadLine();
+
+        Console.WriteLine($"Before: a is <{a}> and b is <{b}>");
+        FirstOOPPropgramm.Homework1.SwapStrings(ref a, ref b);
+        Console.WriteLine($"After: a is <{a}> and b is <{b}>");
+    }
     else if (actualTask == "1.4")
     {
         Console.WriteLine("Пользователь вводит 3 не равных 0 числа (A, B и С). Выведите в консоль решение(значение X) линейного уравнения стандартного вида, где A*X+B=C.");

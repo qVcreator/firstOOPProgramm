@@ -70,5 +70,11 @@ namespace FirstOOPPropgramm
                 return a % b;
             }
         }
+        public static void SwapStrings(ref string a, ref string b)
+        {
+            string swap = a;
+            a = b;
+            b = swap;
+        }
     }
 }
