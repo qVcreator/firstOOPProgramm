@@ -196,6 +196,15 @@ while (isKeepWork == true)
         int numInDegree = FirstOOPPropgramm.Homework3.AscensionToTheDegree(a, b);
 
         Console.WriteLine(numInDegree);
+    }
+    else if (actualTask == "3.2")
+    {
+        Console.WriteLine("Пользователь вводит 2 числа (A и B). Возвести число A в степень B.");
+        Console.Write("Введите число: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+
+        int[] arrOfNums = FirstOOPPropgramm.Homework3.GetArrayFromOneToOneThousandOfNumbersWhichDevidesOnChoosenNum(num);
+        FirstOOPPropgramm.Homework3.WriteAllElementsInIntArray(arrOfNums);
 
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
