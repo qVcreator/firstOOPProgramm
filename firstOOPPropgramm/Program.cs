@@ -199,7 +199,7 @@ while (isKeepWork == true)
     }
     else if (actualTask == "3.2")
     {
-        Console.WriteLine("Пользователь вводит 2 числа (A и B). Возвести число A в степень B.");
+        Console.WriteLine("Пользователь вводит 1 число (A). Вывести все числа от 1 до 1000, которые делятся на A.");
         Console.Write("Введите число: ");
         int num = Convert.ToInt32(Console.ReadLine());
 
@@ -305,6 +305,17 @@ while (isKeepWork == true)
         int MirrorNum = FirstOOPPropgramm.Homework3.GetReverseNum(num);
 
         Console.WriteLine(MirrorNum);
+
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
+    }
+    else if (actualTask == "3.11")
+    {
+        Console.WriteLine("Пользователь вводит целое положительное  число (N). Выведите числа в диапазоне от 1 до N, сумма четных цифр которых больше суммы нечетных. ");
+        Console.Write("Введите число: ");
+        int num = Math.Abs(Convert.ToInt32(Console.ReadLine()));
+
+        int[] arrayOfNums = FirstOOPPropgramm.Homework3.GetNumbersInDiaposonFromOneToChoosenNumWhereSumOfEvenMoreThanSumOfOdd(num);
+        FirstOOPPropgramm.Homework3.WriteAllElementsInIntArray(arrayOfNums);
 
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
