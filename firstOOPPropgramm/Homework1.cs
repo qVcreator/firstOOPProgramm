@@ -20,7 +20,7 @@ namespace FirstOOPPropgramm
             return res;
         }
 
-        public static string GetEquationOfStraightLine(int x1, int y1,int x2,int y2)
+        public static string GetEquationOfStraightLine(int x1, int y1, int x2, int y2)
         {
             double tmp1 = (double)(y1 - y2) / (x2 - x1);
             double tmp2 = (double)((y2 - y1) * x1) / (x2 - x1);
@@ -57,6 +57,17 @@ namespace FirstOOPPropgramm
             else
             {
                 return a / b;
+            }
+        }
+        public static int GetRemainderOfDivison(int a, int b)
+        {
+            if (b == 0)
+            {
+                throw new Exception("b haven't to be zero");
+            }
+            else
+            {
+                return a % b;
             }
         }
     }
