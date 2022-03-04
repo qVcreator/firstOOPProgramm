@@ -175,5 +175,26 @@ namespace FirstOOPPropgramm
 
             return res;
         }
+        public static int[] GetArrayFromOneToOneThousandOfNumbersWhichDevidesOnChoosenNum(int num)
+        {
+            if (num < 1 || num > 1000)
+            {
+                throw new Exception("Number is not in diaposon");
+            }
+            int[] arrayOfNum = { };
+            for (int i = num; i < 1000; i += num)
+            {
+                arrayOfNum.Append(i);
+            }
+
+            return arrayOfNum;
+        }
+        public static void WriteAllElementsInIntArray(int[] arr)
+        {
+            foreach (int item in arr)
+            {
+                Console.WriteLine(item);
+            }
+        }
     }
 }
