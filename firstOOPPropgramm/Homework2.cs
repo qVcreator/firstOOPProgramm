@@ -154,5 +154,23 @@ namespace FirstOOPPropgramm
                 o3 = c;
             }
         }
+
+        public static double FindFirstResultOfQuadraticEquationIfDiscriminantIsMoreThanZero(int a, int b, double dis)
+        {
+            return ((-1 * b) + Math.Sqrt(dis)) / (2 * a);
+        }
+        public static double FindSecondResultOfQuadraticEquationIfDiscriminantIsMoreThanZero(int a, int b, double dis)
+        {
+            return ((-1 * b) - Math.Sqrt(dis)) / (2 * a);
+        }
+        public static double FindResultOfQuadraticEquationIfDiscriminantIsEqualZero(int a, int b)
+        {
+            return (-1 * b) / (2 * a);
+        }
+
+        public static double FindDiscriminant(int a, int b, int c)
+        {
+            return b * b - 4 * a * c;
+        }
     }
 }

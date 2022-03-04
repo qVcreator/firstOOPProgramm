@@ -139,6 +139,40 @@ while (isKeepWork == true)
 
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
+    else if (actualTask == "2.4")
+    {
+        Console.WriteLine("Пользователь вводит 3 числа (A, B и С). Выведите в консоль решение(значения X) квадратного уравнения стандартного вида, где AX^2+BX+C=0.");
+        Console.Write("Введите число a: ");
+        int a = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Введите число b: ");
+        int b = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Введите число c: ");
+        int c = Convert.ToInt32(Console.ReadLine());
+
+        string res = "";
+
+        double dis = FirstOOPPropgramm.Homework2.FindDiscriminant(a, b, c);
+        if (dis > 0 && a != 0)
+        {
+            res = $"x1 = {FirstOOPPropgramm.Homework2.FindFirstResultOfQuadraticEquationIfDiscriminantIsMoreThanZero}\nx2 = {FirstOOPPropgramm.Homework2.FindSecondResultOfQuadraticEquationIfDiscriminantIsMoreThanZero}";
+        }
+        else if (dis == 0 && a != 0)
+        {
+            res = $"x1,2 = {FirstOOPPropgramm.Homework2.FindResultOfQuadraticEquationIfDiscriminantIsEqualZero}";
+        }
+        else if (a == 0)
+        {
+            Console.WriteLine("a=0 try again...");
+            actualTask = "2.4";
+            
+        }
+        else if (dis < 0)
+        {
+            Console.WriteLine("Equation have no any result");
+            actualTask = "2.4";
+            
+        }
+    }
     else if (actualTask == "2.5")
     {
         Console.WriteLine("Пользователь вводит двузначное число. Выведите в консоль прописную запись этого числа. Например при вводе “25” в консоль будет выведено “двадцать пять”.");
