@@ -122,6 +122,23 @@ while (isKeepWork == true)
 
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
+    else if (actualTask == "2.3")
+    {
+        Console.WriteLine("Пользователь вводит 3 числа (A, B и С). Выведите их в консоль в порядке возрастания.");
+        Console.Write("Введите число a: ");
+        int a = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Введите число b: ");
+        int b = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Введите число c: ");
+        int c = Convert.ToInt32(Console.ReadLine());      
+
+        FirstOOPPropgramm.Homework2.GetFromLessToBiggest(a, b, c,out int firstNum, out int secondNum, out int thirdNum);
+        string fromLessToBiggest = $"{firstNum} {secondNum} {thirdNum}";
+
+        Console.WriteLine(fromLessToBiggest);
+
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
+    }
     else if (actualTask == "2.5")
     {
         Console.WriteLine("Пользователь вводит двузначное число. Выведите в консоль прописную запись этого числа. Например при вводе “25” в консоль будет выведено “двадцать пять”.");
