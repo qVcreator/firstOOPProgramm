@@ -381,6 +381,18 @@ while (isKeepWork == true)
 
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
+    else if (actualTask == "4.4")
+    {
+        int[] randomNumbers = FirstOOPPropgramm.Arrays.CreatArray(10);
+
+        int max = FirstOOPPropgramm.Arrays.FindIndexOfMaxArraysNumber(randomNumbers);
+
+        FirstOOPPropgramm.Homework3.WriteAllElementsInIntArray(randomNumbers);
+
+        Console.WriteLine($"index of max num is {max}");
+
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
+    }
     else if (actualTask == "repeat")
     {
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
