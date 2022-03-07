@@ -369,6 +369,18 @@ while (isKeepWork == true)
 
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
+    else if (actualTask == "4.3")
+    {
+        int[] randomNumbers = FirstOOPPropgramm.Arrays.CreatArray(10);
+
+        int min = FirstOOPPropgramm.Arrays.FindIndexOfMinArraysNumber(randomNumbers);
+
+        FirstOOPPropgramm.Homework3.WriteAllElementsInIntArray(randomNumbers);
+
+        Console.WriteLine($"index of min num is {min}");
+
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
+    }
     else if (actualTask == "repeat")
     {
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
