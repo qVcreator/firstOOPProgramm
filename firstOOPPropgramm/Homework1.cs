@@ -8,7 +8,7 @@ namespace FirstOOPPropgramm
 {
     static class Homework1
     {
-        public static int GetSolution(int a, int b)
+        public static double GetSolution(int a, int b)
         {
             if (a == b)
             {
@@ -16,7 +16,7 @@ namespace FirstOOPPropgramm
             }
             else
             {
-                int res = (5 * a + b * b) / (b - a);
+                double res = (5 * a + b * b) / (b - a);
                 return res;
             }
         }
