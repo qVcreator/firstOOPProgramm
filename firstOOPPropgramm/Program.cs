@@ -172,6 +172,7 @@ while (isKeepWork == true)
             actualTask = "2.4";
             
         }
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
     else if (actualTask == "2.5")
     {
