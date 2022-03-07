@@ -406,7 +406,7 @@ while (isKeepWork == true)
 
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
-    else if (actualTask == "4.7")
+    else if (actualTask == "4.8")
     {
         int[] someArr = { 1, 2, 3, 4};
         int[] changedArr = FirstOOPPropgramm.Arrays.ChangeArraysHalfs(someArr);
@@ -416,6 +416,19 @@ while (isKeepWork == true)
 
         Console.Write("\nAfter: ");
         FirstOOPPropgramm.Homework3.WriteAllElementsInIntArray(changedArr);
+
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
+    }
+    else if (actualTask == "bubble")
+    {
+        int[] someArr = FirstOOPPropgramm.Arrays.CreatArray(4);
+        int[] bubbledArr = FirstOOPPropgramm.Arrays.BubbleSort(someArr);
+
+        Console.Write("Before: ");
+        FirstOOPPropgramm.Homework3.WriteAllElementsInIntArray(someArr);
+
+        Console.Write("\nAfter: ");
+        FirstOOPPropgramm.Homework3.WriteAllElementsInIntArray(bubbledArr);
 
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }

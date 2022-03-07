@@ -158,16 +158,16 @@ namespace FirstOOPPropgramm
             if (arr.Length % 2 != 0)
             {
                 int j = 0;
-                for (int i = (arr.Length/2)+1; i < arr.Length; i++)
+                for (int i = (arr.Length / 2) + 1; i < arr.Length; i++)
                 {
-                    tmpArr[j]=arr[i];
+                    tmpArr[j] = arr[i];
                     j++;
                 }
-                tmpArr[arr.Length/2]=arr[arr.Length/2];
+                tmpArr[arr.Length / 2] = arr[arr.Length / 2];
                 j = 0;
                 for (int i = (tmpArr.Length / 2) + 1; i < tmpArr.Length; i++)
                 {
-                    tmpArr[i]=arr[j];
+                    tmpArr[i] = arr[j];
                     j++;
                 }
             }
@@ -189,6 +189,29 @@ namespace FirstOOPPropgramm
 
             return tmpArr;
 
+        }
+        public static int[] BubbleSort(int[] arr)
+        {
+            if (arr == null)
+            {
+                throw new Exception("arr can't be null");
+            }
+            int[] tmpArr = new int[arr.Length];
+
+            Array.Copy(arr, tmpArr, arr.Length);
+
+            for (int i=0; i<tmpArr.Length-1; i++)
+            {
+                for (int j = tmpArr.Length - 1; j > 0; j--)
+                {
+                    if (tmpArr[j] < tmpArr[j - 1])
+                    {
+                        Homework1.SwapNums(ref tmpArr[j], ref tmpArr[j - 1]);
+                    }
+                }
+            }
+            
+            return tmpArr;
         }
     }
 }
