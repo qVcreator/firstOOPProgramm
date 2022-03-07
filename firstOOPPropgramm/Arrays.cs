@@ -8,6 +8,17 @@ namespace FirstOOPPropgramm
 {
     static class Arrays
     {
+        public static int[] CreatArray(int quantityCells)
+        {
+            int[] array = new int[quantityCells];
+            Random r = new Random();
+            for (int i = 0; i < quantityCells; i++)
+            {
+                array[i] = r.Next();
+            }
+            return array;
+        }
+
         public static int FindMinOfArray(int[] arr)
         {
             if (arr == null)

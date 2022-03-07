@@ -11,28 +11,7 @@ while (isKeepWork == true)
     }
     else if (actualTask == "1.1")
     {
-        Console.WriteLine("Пользователь вводит 2 числа (A и B). Выведите в консоль результат деления A на B и остаток от деления.");
-        Console.Write("Введите число а: ");
-        int a = Convert.ToInt32(Console.ReadLine());
-        Console.Write("Введите число b: ");
-        int b = Convert.ToInt32(Console.ReadLine());
         
-        if (FirstOOPPropgramm.UserInterface.IsZero(b) == true)
-        {
-            Console.WriteLine($"\nb haven't to be zero, please try again");
-
-            actualTask = "1.1";
-        }
-        else
-        {
-            int resOfDivision = FirstOOPPropgramm.Homework1.GetResultOfDivison(a, b);
-            int remOfDivision = FirstOOPPropgramm.Homework1.GetRemainderOfDivison(a, b);
-
-            Console.WriteLine($"Result of division is {resOfDivision}");
-            Console.WriteLine($"Remainder of division is {remOfDivision}");
-
-            actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
-        }
     }
     else if (actualTask == "1.2")   
     {
@@ -62,13 +41,7 @@ while (isKeepWork == true)
     }
     else if (actualTask == "1.4")
     {
-        Console.WriteLine("Пользователь вводит 3 не равных 0 числа (A, B и С). Выведите в консоль решение(значение X) линейного уравнения стандартного вида, где A*X+B=C.");
-        Console.Write("Введите число а: ");
-        int a = Convert.ToInt32(Console.ReadLine());
-        Console.Write("Введите число b: ");
-        int b = Convert.ToInt32(Console.ReadLine());
-        Console.Write("Введите число c: ");
-        int c = Convert.ToInt32(Console.ReadLine());
+        
 
         int resHomework1_4 = FirstOOPPropgramm.Homework1.GetSolveOfLinearEquation(a, b, c);
 
@@ -342,6 +315,13 @@ while (isKeepWork == true)
         }
 
         Console.WriteLine(res);
+
+        
+    }
+    else if (actualTask == "4.1")
+    {
+        
+        
 
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }

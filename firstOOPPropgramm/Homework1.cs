@@ -8,7 +8,7 @@ namespace FirstOOPPropgramm
 {
     static class Homework1
     {
-        public static double GetSolution(int a, int b)
+        public static double GetSolution(double a, double b)
         {
             if (a == b)
             {
