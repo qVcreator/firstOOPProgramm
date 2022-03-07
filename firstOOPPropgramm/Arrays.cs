@@ -145,5 +145,50 @@ namespace FirstOOPPropgramm
 
             return count;
         }
+
+        public static int[] ChangeArraysHalfs(int[] arr)
+        {
+            if (arr == null)
+            {
+                throw new Exception("arr can't be null");
+            }
+
+            int[] tmpArr = new int[arr.Length];
+
+            if (arr.Length % 2 != 0)
+            {
+                int j = 0;
+                for (int i = (arr.Length/2)+1; i < arr.Length; i++)
+                {
+                    tmpArr[j]=arr[i];
+                    j++;
+                }
+                tmpArr[arr.Length/2]=arr[arr.Length/2];
+                j = 0;
+                for (int i = (tmpArr.Length / 2) + 1; i < tmpArr.Length; i++)
+                {
+                    tmpArr[i]=arr[j];
+                    j++;
+                }
+            }
+            else
+            {
+                int j = 0;
+                for (int i = (arr.Length / 2); i < arr.Length; i++)
+                {
+                    tmpArr[j] = arr[i];
+                    j++;
+                }
+                j = 0;
+                for (int i = (tmpArr.Length / 2); i < tmpArr.Length; i++)
+                {
+                    tmpArr[i] = arr[j];
+                    j++;
+                }
+            }
+
+            return tmpArr;
+
+        }
     }
 }

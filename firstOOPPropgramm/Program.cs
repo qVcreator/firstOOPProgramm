@@ -406,6 +406,19 @@ while (isKeepWork == true)
 
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
+    else if (actualTask == "4.7")
+    {
+        int[] someArr = { 1, 2, 3, 4};
+        int[] changedArr = FirstOOPPropgramm.Arrays.ChangeArraysHalfs(someArr);
+
+        Console.Write("Before: ");
+        FirstOOPPropgramm.Homework3.WriteAllElementsInIntArray(someArr);
+
+        Console.Write("\nAfter: ");
+        FirstOOPPropgramm.Homework3.WriteAllElementsInIntArray(changedArr);
+
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
+    }
     else if (actualTask == "repeat")
     {
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();

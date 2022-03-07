@@ -201,7 +201,7 @@ namespace FirstOOPPropgramm
         {
             foreach (int item in arr)
             {
-                Console.WriteLine(item);
+                Console.Write($"{item} ");
             }
         }
 
