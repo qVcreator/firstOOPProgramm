@@ -125,5 +125,25 @@ namespace FirstOOPPropgramm
             }
             return tmpArr;
         }
+
+        public static int CountOddNumbersInArray(int[] arr)
+        {
+            if (arr == null)
+            {
+                throw new Exception("arr can't be null");
+            }
+
+            int count = 0;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] % 2 != 0)
+                {
+                    count++;
+                }
+            }
+
+            return count;
+        }
     }
 }
