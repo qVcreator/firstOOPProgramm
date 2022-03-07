@@ -43,9 +43,9 @@ namespace FirstOOPPropgramm
                 throw new Exception("arr can't be null");
             }
             int max = arr[0];
-            for (int i=1; i<arr.Length; i++)
+            for (int i = 1; i < arr.Length; i++)
             {
-                if(arr[i] > max)
+                if (arr[i] > max)
                 {
                     max = arr[i];
                 }
@@ -55,7 +55,7 @@ namespace FirstOOPPropgramm
 
         public static int FindIndexOfMinArraysNumber(int[] arr)
         {
-            if(arr == null)
+            if (arr == null)
             {
                 throw new Exception("arr can't be null");
             }
@@ -97,9 +97,9 @@ namespace FirstOOPPropgramm
             }
 
             int sum = 0;
-            for (int i = 1; i < arr.Length; i+=2)
+            for (int i = 1; i < arr.Length; i += 2)
             {
-                sum +=arr[i];
+                sum += arr[i];
             }
             return sum;
         }
@@ -113,10 +113,10 @@ namespace FirstOOPPropgramm
 
             int[] tmpArr = new int[arr.Length];
             int j = 0;
-            
-            for (int i = arr.Length-1; i >= 0; i--)
+
+            for (int i = arr.Length - 1; i >= 0; i--)
             {
-                tmpArr[j]=arr[i];
+                tmpArr[j] = arr[i];
                 j++;
             }
             return tmpArr;
@@ -196,7 +196,7 @@ namespace FirstOOPPropgramm
 
             Array.Copy(arr, tmpArr, arr.Length);
 
-            for (int i=0; i<tmpArr.Length-1; i++)
+            for (int i = 0; i < tmpArr.Length - 1; i++)
             {
                 for (int j = tmpArr.Length - 1; j > 0; j--)
                 {
@@ -206,7 +206,7 @@ namespace FirstOOPPropgramm
                     }
                 }
             }
-            
+
             return tmpArr;
         }
 
@@ -233,6 +233,27 @@ namespace FirstOOPPropgramm
                 Homework1.SwapNums(ref tmpArr[i], ref tmpArr[minIndex]);
             }
 
+            return tmpArr;
+        }
+        public static int[] InsertionSort(int[] arr)
+        {
+            if (arr == null)
+            {
+                throw new Exception("arr can't be null");
+            }
+            int[] tmpArr = new int[arr.Length];
+
+            Array.Copy(arr, tmpArr, arr.Length);
+            for (int i=1; i < arr.Length; i++)
+            {
+                int j = i;
+                int movedNum = tmpArr[i];
+                while ((j >0) && (movedNum < tmpArr[j-1]))
+                {
+                    Homework1.SwapNums(ref tmpArr[j], ref tmpArr[j-1]);
+                    j--;
+                }
+            }
             return tmpArr;
         }
     }

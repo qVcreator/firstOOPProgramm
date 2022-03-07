@@ -445,6 +445,19 @@ while (isKeepWork == true)
 
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
+    else if (actualTask == "insert")
+    {
+        int[] someArr = FirstOOPPropgramm.Arrays.CreatArray(7);
+        int[] insertedArr = FirstOOPPropgramm.Arrays.InsertionSort(someArr);
+
+        Console.Write("Before: ");
+        FirstOOPPropgramm.Homework3.WriteAllElementsInIntArray(someArr);
+
+        Console.Write("\nAfter: ");
+        FirstOOPPropgramm.Homework3.WriteAllElementsInIntArray(insertedArr);
+
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
+    }
     else if (actualTask == "repeat")
     {
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
@@ -453,6 +466,10 @@ while (isKeepWork == true)
     {
         Console.Clear();
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
+    }
+    else
+    {
+        actualTask = "repeat";
     }
 }
 
