@@ -207,6 +207,10 @@ namespace FirstOOPPropgramm
 
         public static int[] GetNumbersInRangeFromOneToChoosenNumWhereSumOfEvenMoreThanSumOfOdd(int num)
         {
+            if (num < 1)
+            {
+                throw new Exception("num > 1");
+            }
             int[] arr = { };
             int tmp1 = 1;
             while (tmp1 <= num)
