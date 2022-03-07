@@ -92,5 +92,38 @@ namespace FirstOOPPropgramm
             }
             return maxIndex;
         }
+
+        public static int CountSumOfArrayWhereIndexIsOdd(int[] arr)
+        {
+            if (arr == null)
+            {
+                throw new Exception("arr can't be null");
+            }
+
+            int sum = 0;
+            for (int i = 1; i < arr.Length; i+=2)
+            {
+                sum +=arr[i];
+            }
+            return sum;
+        }
+
+        public static int[] ReverseArray(int[] arr)
+        {
+            if (arr == null)
+            {
+                throw new Exception("arr can't be null");
+            }
+
+            int[] tmpArr = new int[arr.Length];
+            int j = 0;
+            
+            for (int i = arr.Length-1; i >= 0; i--)
+            {
+                tmpArr[j]=arr[i];
+                j++;
+            }
+            return tmpArr;
+        }
     }
 }
