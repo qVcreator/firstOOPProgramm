@@ -60,13 +60,11 @@ namespace FirstOOPPropgramm
                 throw new Exception("arr can't be null");
             }
 
-            int min = arr[0];
             int minIndex = 0;
             for (int i = 1; i < arr.Length; i++)
             {
-                if (arr[i] < min)
+                if (arr[i] < arr[minIndex])
                 {
-                    min = arr[i];
                     minIndex = i;
                 }
             }
@@ -80,13 +78,11 @@ namespace FirstOOPPropgramm
                 throw new Exception("arr can't be null");
             }
 
-            int min = arr[0];
             int maxIndex = 0;
             for (int i = 1; i < arr.Length; i++)
             {
-                if (arr[i] > min)
+                if (arr[i] > arr[maxIndex])
                 {
-                    min = arr[i];
                     maxIndex = i;
                 }
             }
@@ -211,6 +207,32 @@ namespace FirstOOPPropgramm
                 }
             }
             
+            return tmpArr;
+        }
+
+        public static int[] SelectionSort(int[] arr)
+        {
+            if (arr == null)
+            {
+                throw new Exception("arr can't be null");
+            }
+            int[] tmpArr = new int[arr.Length];
+
+            Array.Copy(arr, tmpArr, arr.Length);
+
+            for (int i = 0; i < tmpArr.Length; i++)
+            {
+                int minIndex = i;
+                for (int j = i + 1; j < tmpArr.Length; j++)
+                {
+                    if (tmpArr[j] < tmpArr[minIndex])
+                    {
+                        minIndex = j;
+                    }
+                }
+                Homework1.SwapNums(ref tmpArr[i], ref tmpArr[minIndex]);
+            }
+
             return tmpArr;
         }
     }

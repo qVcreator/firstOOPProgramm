@@ -432,6 +432,19 @@ while (isKeepWork == true)
 
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
+    else if (actualTask == "select")
+    {
+        int[] someArr = { 10,9,8,7,6,5,4,3,2,1};
+        int[] selectedArr = FirstOOPPropgramm.Arrays.SelectionSort(someArr);
+
+        Console.Write("Before: ");
+        FirstOOPPropgramm.Homework3.WriteAllElementsInIntArray(someArr);
+
+        Console.Write("\nAfter: ");
+        FirstOOPPropgramm.Homework3.WriteAllElementsInIntArray(selectedArr);
+
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
+    }
     else if (actualTask == "repeat")
     {
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
