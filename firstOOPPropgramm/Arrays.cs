@@ -14,7 +14,7 @@ namespace FirstOOPPropgramm
             Random r = new Random();
             for (int i = 0; i < quantityCells; i++)
             {
-                array[i] = r.Next();
+                array[i] = r.Next(-100, 101);
             }
             return array;
         }
@@ -35,6 +35,22 @@ namespace FirstOOPPropgramm
                 }
             }
             return min;
+        }
+        public static int FindMaxOfArray(int[] arr)
+        {
+            if (arr == null)
+            {
+                throw new Exception("arr can't be null");
+            }
+            int max = arr[0];
+            for (int i=1; i<arr.Length; i++)
+            {
+                if(arr[i] > max)
+                {
+                    max = arr[i];
+                }
+            }
+            return max;
         }
     }
 }
