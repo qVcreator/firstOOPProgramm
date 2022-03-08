@@ -458,6 +458,19 @@ while (isKeepWork == true)
 
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
     }
+    else if (actualTask == "co")
+    {
+        int[] someArr = FirstOOPPropgramm.Arrays.CreatArray(4);
+        int[] shakedArr = FirstOOPPropgramm.Arrays.CountSort(someArr);
+
+        Console.Write("Before: ");
+        FirstOOPPropgramm.Homework3.WriteAllElementsInIntArray(someArr);
+
+        Console.Write("\nAfter: ");
+        FirstOOPPropgramm.Homework3.WriteAllElementsInIntArray(shakedArr);
+
+        actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
+    }
     else if (actualTask == "repeat")
     {
         actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();

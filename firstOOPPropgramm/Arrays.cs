@@ -256,5 +256,32 @@ namespace FirstOOPPropgramm
             }
             return tmpArr;
         }
+
+        public static int[] CountSort(int[] arr)
+        {
+            if (arr == null)
+            {
+                throw new Exception("arr can't be null");
+            }
+            int[] tmpArr = new int[arr.Length];
+
+            
+
+            for (int i=0; i < arr.Length; i++)
+            {
+                int count = arr.Length;
+                for (int j = 0; j < arr.Length; j++)
+                {
+                    if (arr[i] > arr[j])
+                    {
+                        count--;
+                        
+                    }
+                }
+                tmpArr[count - 1] = arr[i];
+            }
+
+            return tmpArr;
+        }
     }
 }
