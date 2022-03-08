@@ -189,13 +189,19 @@ namespace FirstOOPPropgramm
             {
                 throw new Exception("Number is not in range");
             }
-            int[] arrayOfNum = { };
+            int count = 0;
             for (int i = num; i < 1000; i += num)
             {
-                arrayOfNum.Append(i);
+                count++;
             }
-
-            return arrayOfNum;
+            int index = 0;
+            int[] arr = new int[count];
+            for (int i = num; i < 1000; i += num)
+            {
+                arr[index] = i;
+                index++;
+            }
+            return arr;
         }
         public static void WriteAllElementsInIntArray(int[] arr)
         {
@@ -204,14 +210,10 @@ namespace FirstOOPPropgramm
                 Console.Write($"{item} ");
             }
         }
-
-        public static int[] GetNumbersInRangeFromOneToChoosenNumWhereSumOfEvenMoreThanSumOfOdd(int num)
+        
+        static int CountItemsForCreatingArr(int num)
         {
-            if (num < 1)
-            {
-                throw new Exception("num > 1");
-            }
-            int[] arr = { };
+            int count = 0;
             int tmp1 = 1;
             while (tmp1 <= num)
             {
@@ -232,10 +234,49 @@ namespace FirstOOPPropgramm
                 }
                 if (even > odd)
                 {
-                    arr.Append(tmp1);
+                    count++;
                 }
                 tmp1++;
             }
+            return count;
+        }
+        public static int[] GetNumbersInRangeFromOneToChoosenNumWhereSumOfEvenMoreThanSumOfOdd(int num)
+        {
+            if (num < 1)
+            {
+                throw new Exception("num > 1");
+            }
+
+            int arrLenght = CountItemsForCreatingArr(num);
+            int[] arr = new int[arrLenght];
+            int tmp1 = 1;
+            int indexArr = 0;
+
+            while (tmp1 <= num)
+            {
+                int even = 0;
+                int odd = 0;
+                int tmp2 = tmp1;
+                while (tmp2 != 0)
+                {
+                    if (tmp2 % 2 == 0)
+                    {
+                        even += tmp2 % 10;
+                    }
+                    else
+                    {
+                        odd += tmp2 % 10;
+                    }
+                    tmp2 /= 10;
+                }
+                if (even > odd)
+                {
+                    arr[indexArr] = tmp1;
+                    indexArr++;
+                }
+                tmp1++;
+            }
+
             return arr;
         }
     }
