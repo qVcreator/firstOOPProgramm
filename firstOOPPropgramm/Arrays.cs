@@ -6,25 +6,9 @@ using System.Threading.Tasks;
 
 namespace FirstOOPPropgramm
 {
-    static class Arrays
+    static class ArrayContainer
     {
-        public static int[] CreatArray(int quantityCells)
-        {
-            if (quantityCells < 0)
-            {
-                throw new Exception("quantityCells have to be more than zero");
-            }
-
-            int[] array = new int[quantityCells];
-            Random r = new Random();
-            for (int i = 0; i < quantityCells; i++)
-            {
-                array[i] = r.Next(-100, 101);
-            }
-            return array;
-        }
-
-        public static int FindMinOfArray(int[] arr)
+        public static int FindMin(int[] arr)
         {
             if (arr == null)
             {
@@ -41,7 +25,7 @@ namespace FirstOOPPropgramm
             }
             return min;
         }
-        public static int FindMaxOfArray(int[] arr)
+        public static int FindMax(int[] arr)
         {
             if (arr == null)
             {
@@ -58,7 +42,7 @@ namespace FirstOOPPropgramm
             return max;
         }
 
-        public static int FindIndexOfMinArraysNumber(int[] arr)
+        public static int FindIndexOfMin(int[] arr)
         {
             if (arr == null)
             {
@@ -76,7 +60,7 @@ namespace FirstOOPPropgramm
             return minIndex;
         }
 
-        public static int FindIndexOfMaxArraysNumber(int[] arr)
+        public static int FindIndexOfMax(int[] arr)
         {
             if (arr == null)
             {
@@ -94,7 +78,7 @@ namespace FirstOOPPropgramm
             return maxIndex;
         }
 
-        public static int CountSumOfArrayWhereIndexIsOdd(int[] arr)
+        public static int CountSumWhereIndexIsOdd(int[] arr)
         {
             if (arr == null)
             {
@@ -109,7 +93,7 @@ namespace FirstOOPPropgramm
             return sum;
         }
 
-        public static int[] ReverseArray(int[] arr)
+        public static int[] Reverse(int[] arr)
         {
             if (arr == null)
             {
@@ -127,7 +111,7 @@ namespace FirstOOPPropgramm
             return tmpArr;
         }
 
-        public static int CountOddNumbersInArray(int[] arr)
+        public static int CountOddNumbers(int[] arr)
         {
             if (arr == null)
             {
@@ -147,7 +131,7 @@ namespace FirstOOPPropgramm
             return count;
         }
 
-        public static int[] ChangeArraysHalfs(int[] arr)
+        public static int[] ChangeHalfs(int[] arr)
         {
             if (arr == null)
             {
@@ -288,6 +272,22 @@ namespace FirstOOPPropgramm
             int[] newArr = new int[arr.Length];
             Array.Copy(arr, newArr, arr.Length);
             return newArr;
+        }
+
+        public static int[] CreateRandom(int quantityCells)
+        {
+            if (quantityCells < 0)
+            {
+                throw new Exception("quantityCells have to be more than zero");
+            }
+
+            int[] array = new int[quantityCells];
+            Random r = new Random();
+            for (int i = 0; i < quantityCells; i++)
+            {
+                array[i] = r.Next(-100, 101);
+            }
+            return array;
         }
     }
 }

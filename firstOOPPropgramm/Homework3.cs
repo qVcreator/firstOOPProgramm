@@ -203,13 +203,6 @@ namespace FirstOOPPropgramm
             }
             return arr;
         }
-        public static void WriteAllElementsInIntArray(int[] arr)
-        {
-            foreach (int item in arr)
-            {
-                Console.Write($"{item} ");
-            }
-        }
         
         static int CountItemsForCreatingArr(int num)
         {
@@ -278,6 +271,14 @@ namespace FirstOOPPropgramm
             }
 
             return arr;
+        }
+
+        public static void WriteAllElementsInIntArray(int[] arr)
+        {
+            foreach (int item in arr)
+            {
+                Console.Write($"{item} ");
+            }
         }
     }
 }

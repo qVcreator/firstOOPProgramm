@@ -8,7 +8,7 @@ namespace FirstOOPPropgramm
 {
     static class Homework2
     {
-        public static int IfBoolDoMath(int a, int b)
+        public static int DoMathIfBool(int a, int b)
         {
             int res = 0;
 
@@ -27,7 +27,7 @@ namespace FirstOOPPropgramm
 
             return res;
         }
-        public static string WhichQuarter(int x, int y)
+        public static string GetWhichQuarter(int x, int y)
         {
             string res = "";
 
