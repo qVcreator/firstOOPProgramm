@@ -10,6 +10,11 @@ namespace FirstOOPPropgramm
     {
         public static int[] CreatArray(int quantityCells)
         {
+            if (quantityCells < 0)
+            {
+                throw new Exception("quantityCells have to be more than zero");
+            }
+
             int[] array = new int[quantityCells];
             Random r = new Random();
             for (int i = 0; i < quantityCells; i++)
@@ -192,9 +197,7 @@ namespace FirstOOPPropgramm
             {
                 throw new Exception("arr can't be null");
             }
-            int[] tmpArr = new int[arr.Length];
-
-            Array.Copy(arr, tmpArr, arr.Length);
+            int[] tmpArr = CopyArray(arr);
 
             for (int i = 0; i < tmpArr.Length - 1; i++)
             {
@@ -216,9 +219,7 @@ namespace FirstOOPPropgramm
             {
                 throw new Exception("arr can't be null");
             }
-            int[] tmpArr = new int[arr.Length];
-
-            Array.Copy(arr, tmpArr, arr.Length);
+            int[] tmpArr = CopyArray(arr);
 
             for (int i = 0; i < tmpArr.Length; i++)
             {
@@ -241,16 +242,14 @@ namespace FirstOOPPropgramm
             {
                 throw new Exception("arr can't be null");
             }
-            int[] tmpArr = new int[arr.Length];
-
-            Array.Copy(arr, tmpArr, arr.Length);
-            for (int i=1; i < arr.Length; i++)
+            int[] tmpArr = CopyArray(arr);
+            for (int i = 1; i < arr.Length; i++)
             {
                 int j = i;
                 int movedNum = tmpArr[i];
-                while ((j >0) && (movedNum < tmpArr[j-1]))
+                while ((j > 0) && (movedNum < tmpArr[j - 1]))
                 {
-                    Homework1.SwapNums(ref tmpArr[j], ref tmpArr[j-1]);
+                    Homework1.SwapNums(ref tmpArr[j], ref tmpArr[j - 1]);
                     j--;
                 }
             }
@@ -265,9 +264,9 @@ namespace FirstOOPPropgramm
             }
             int[] tmpArr = new int[arr.Length];
 
-            
 
-            for (int i=0; i < arr.Length; i++)
+
+            for (int i = 0; i < arr.Length; i++)
             {
                 int count = arr.Length;
                 for (int j = 0; j < arr.Length; j++)
@@ -275,13 +274,20 @@ namespace FirstOOPPropgramm
                     if (arr[i] > arr[j])
                     {
                         count--;
-                        
+
                     }
                 }
                 tmpArr[count - 1] = arr[i];
             }
 
             return tmpArr;
+        }
+
+        public static int[] CopyArray(int[] arr)
+        {
+            int[] newArr = new int[arr.Length];
+            Array.Copy(arr, newArr, arr.Length);
+            return newArr;
         }
     }
 }
