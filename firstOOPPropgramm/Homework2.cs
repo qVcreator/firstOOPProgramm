@@ -179,11 +179,9 @@ namespace FirstOOPPropgramm
             }
             return res;
         }
-        public static void GetFromLessToBiggest(int a, int b, int c, out int o1, out int o2, out int o3)
+        public static int[] GetFromLessToBiggest(int a, int b, int c)
         {
-            o1 = 0;
-            o2 = 0;
-            o3 = 0;
+            int[] output = new int[3];
             if ((a >= b && a >= c) && (b >= c))
             {
                 o1 = c;
@@ -266,6 +264,13 @@ namespace FirstOOPPropgramm
             {
                 return b * b - 4 * a * c;
             }
+        }
+
+        static int[] PullInToArray(int biggest, int  mid, int less, int[] arr)
+        {
+            arr[0] = less;
+            arr[1] = mid;
+            arr[2] = biggest;
         }
     }
 }
