@@ -10,7 +10,7 @@ namespace FirstOOPPropgramm
     {
         public static int FindMin(int[] arr)
         {
-            if (arr == null)
+            if (arr.Length == 0)
             {
                 throw new Exception("arr can't be null");
             }
@@ -27,7 +27,7 @@ namespace FirstOOPPropgramm
         }
         public static int FindMax(int[] arr)
         {
-            if (arr == null)
+            if (arr.Length == 0)
             {
                 throw new Exception("arr can't be null");
             }
@@ -44,7 +44,7 @@ namespace FirstOOPPropgramm
 
         public static int FindIndexOfMin(int[] arr)
         {
-            if (arr == null)
+            if (arr.Length == 0)
             {
                 throw new Exception("arr can't be null");
             }
@@ -62,7 +62,7 @@ namespace FirstOOPPropgramm
 
         public static int FindIndexOfMax(int[] arr)
         {
-            if (arr == null)
+            if (arr.Length == 0)
             {
                 throw new Exception("arr can't be null");
             }
@@ -80,7 +80,7 @@ namespace FirstOOPPropgramm
 
         public static int CountSumWhereIndexIsOdd(int[] arr)
         {
-            if (arr == null)
+            if (arr.Length == 0)
             {
                 throw new Exception("arr can't be null");
             }
@@ -95,7 +95,7 @@ namespace FirstOOPPropgramm
 
         public static int[] Reverse(int[] arr)
         {
-            if (arr == null)
+            if (arr.Length == 0)
             {
                 throw new Exception("arr can't be null");
             }
@@ -113,7 +113,7 @@ namespace FirstOOPPropgramm
 
         public static int CountOddNumbers(int[] arr)
         {
-            if (arr == null)
+            if (arr.Length == 0)
             {
                 throw new Exception("arr can't be null");
             }
@@ -133,7 +133,7 @@ namespace FirstOOPPropgramm
 
         public static int[] ChangeHalfs(int[] arr)
         {
-            if (arr == null)
+            if (arr.Length == 0)
             {
                 throw new Exception("arr can't be null");
             }
@@ -177,7 +177,7 @@ namespace FirstOOPPropgramm
         }
         public static int[] BubbleSort(int[] arr)
         {
-            if (arr == null)
+            if (arr.Length == 0)
             {
                 throw new Exception("arr can't be null");
             }
@@ -199,7 +199,7 @@ namespace FirstOOPPropgramm
 
         public static int[] SelectionSort(int[] arr)
         {
-            if (arr == null)
+            if (arr.Length == 0)
             {
                 throw new Exception("arr can't be null");
             }
@@ -222,7 +222,7 @@ namespace FirstOOPPropgramm
         }
         public static int[] InsertionSort(int[] arr)
         {
-            if (arr == null)
+            if (arr.Length == 0)
             {
                 throw new Exception("arr can't be null");
             }
@@ -242,7 +242,7 @@ namespace FirstOOPPropgramm
 
         public static int[] CountSort(int[] arr)
         {
-            if (arr == null)
+            if (arr.Length == 0)
             {
                 throw new Exception("arr can't be null");
             }
