@@ -1,10 +1,7 @@
 ﻿using FirstOOPPropgramm;
 
-int[,] arr = FirstOOPPropgramm.DoubleArrayContainer.CreateRandom();
-FirstOOPPropgramm.DoubleArrayContainer.Show(arr);
-Console.WriteLine();
-int[,] newArr = FirstOOPPropgramm.DoubleArrayContainer.Swap(arr);
-FirstOOPPropgramm.DoubleArrayContainer.Show(newArr);
+int a = 64;
+Console.WriteLine(FirstOOPPropgramm.Homework3.FindLessThanSqureOfNum(a));
 
 //string actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
 //bool isKeepWork = true;

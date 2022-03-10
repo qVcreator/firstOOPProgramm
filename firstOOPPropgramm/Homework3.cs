@@ -32,8 +32,8 @@ namespace FirstOOPPropgramm
 
         public static int FindLessThanSqureOfNum(int a)
         {
-            int check = 1;
-            while (check * check < a)
+            int check = 0;
+            for (int i = 1; i*i < a; i++)
             {
                 check++;
             }

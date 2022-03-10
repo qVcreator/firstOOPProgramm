@@ -181,46 +181,51 @@ namespace FirstOOPPropgramm
         }
         public static int[] GetFromLessToBiggest(int a, int b, int c)
         {
-            int[] output = new int[3];
+            int[] outputArr = new int[3];
             if ((a >= b && a >= c) && (b >= c))
             {
-                o1 = c;
-                o2 = b;
-                o3 = a;
+                PullInToArray(c, b, a, outputArr);
             }
             else if ((a >= b && a >= c) && (c >= b))
             {
-                o1 = b;
-                o2 = c;
-                o3 = a;
+                PullInToArray(b, c, a, outputArr);
             }
             else if ((b >= a && b >= c) && (a >= c))
             {
-                o1 = c;
-                o2 = a;
-                o3 = b;
+                PullInToArray(c, a, b, outputArr);
             }
             else if ((b >= a && b >= c) && (c >= a))
             {
-                o1 = a;
-                o2 = c;
-                o3 = b;
+                PullInToArray(a, c, b, outputArr);
             }
             else if ((c >= a && c >= b) && (a >= b))
             {
-                o1 = b;
-                o2 = a;
-                o3 = c;
+                PullInToArray(b, a, c, outputArr);
             }
             else if ((c >= a && c >= b) && (b >= a))
             {
-                o1 = a;
-                o2 = b;
-                o3 = c;
+                PullInToArray(a, b, c, outputArr);
             }
+            return outputArr;
         }
 
-        public static double FindFirstResultOfQuadraticEquationIfDiscriminantIsMoreThanZero(int a, int b, double dis)
+        public static double[] GetResultOfQuadraticEquation(int a, int b, int c)
+        {
+            double dis = FindDiscriminant(a, b, c);
+            double[] res = new double[2];
+            if (dis > 0)
+            {
+                res[0] = FindFirstResultOfQuadraticEquationIfDiscriminantIsMoreThanZero(a, b, dis);
+                res[1] = FindSecondResultOfQuadraticEquationIfDiscriminantIsMoreThanZero(a, b, dis);
+            }
+            else if (dis == 0)
+            {
+                res[0] = FindResultOfQuadraticEquationIfDiscriminantIsEqualZero(a,b);
+                res[1] = res[0];
+            }
+            return res;
+        }
+        static double FindFirstResultOfQuadraticEquationIfDiscriminantIsMoreThanZero(int a, int b, double dis)
         {
             if (a == 0)
             {
@@ -231,7 +236,7 @@ namespace FirstOOPPropgramm
                 return ((-1 * b) + Math.Sqrt(dis)) / (2 * a);
             }
         }
-        public static double FindSecondResultOfQuadraticEquationIfDiscriminantIsMoreThanZero(int a, int b, double dis)
+        static double FindSecondResultOfQuadraticEquationIfDiscriminantIsMoreThanZero(int a, int b, double dis)
         {
             if (a == 0)
             {
@@ -242,7 +247,7 @@ namespace FirstOOPPropgramm
                 return ((-1 * b) - Math.Sqrt(dis)) / (2 * a);
             }
         }
-        public static double FindResultOfQuadraticEquationIfDiscriminantIsEqualZero(int a, int b)
+        static double FindResultOfQuadraticEquationIfDiscriminantIsEqualZero(int a, int b)
         {
             if (a == 0)
             {
@@ -254,7 +259,7 @@ namespace FirstOOPPropgramm
             }
         }
 
-        public static double FindDiscriminant(int a, int b, int c)
+        static double FindDiscriminant(int a, int b, int c)
         {
             if ((b * b - 4 * a * c) < 0)
             {
@@ -266,7 +271,7 @@ namespace FirstOOPPropgramm
             }
         }
 
-        static int[] PullInToArray(int biggest, int  mid, int less, int[] arr)
+        static void PullInToArray(int less, int  mid, int biggest, int[] arr)
         {
             arr[0] = less;
             arr[1] = mid;
