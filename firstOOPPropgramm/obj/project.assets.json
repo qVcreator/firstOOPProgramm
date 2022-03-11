@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Тимур\\source\\repos\\firstOOPProgramm\\firstOOPPropgramm\\firstOOPPropgramm.csproj",
-      "projectName": "firstOOPPropgramm",
-      "projectPath": "C:\\Users\\Тимур\\source\\repos\\firstOOPProgramm\\firstOOPPropgramm\\firstOOPPropgramm.csproj",
+      "projectUniqueName": "C:\\Users\\Тимур\\source\\repos\\firstOOPProgramm\\firstOOPPropgramm\\FirstOOPPropgramm.csproj",
+      "projectName": "FirstOOPPropgramm",
+      "projectPath": "C:\\Users\\Тимур\\source\\repos\\firstOOPProgramm\\firstOOPPropgramm\\FirstOOPPropgramm.csproj",
       "packagesPath": "C:\\Users\\Тимур\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Тимур\\source\\repos\\firstOOPProgramm\\firstOOPPropgramm\\obj\\",
       "projectStyle": "PackageReference",

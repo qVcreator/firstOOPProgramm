@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FirstOOPPropgramm
 {
-    static class Homework1
+    public static class Homework1
     {
         public static double GetSolution(double a, double b)
         {
