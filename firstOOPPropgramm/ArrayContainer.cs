@@ -95,11 +95,6 @@ namespace FirstOOPPropgramm
 
         public static int[] Reverse(int[] arr)
         {
-            if (arr.Length == 0)
-            {
-                throw new Exception("arr can't be null");
-            }
-
             int[] tmpArr = new int[arr.Length];
             int j = 0;
 
@@ -133,11 +128,6 @@ namespace FirstOOPPropgramm
 
         public static int[] ChangeHalfs(int[] arr)
         {
-            if (arr.Length == 0)
-            {
-                throw new Exception("arr can't be null");
-            }
-
             int[] tmpArr = new int[arr.Length];
 
             if (arr.Length % 2 != 0)
