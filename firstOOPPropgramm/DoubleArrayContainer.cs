@@ -10,7 +10,7 @@ namespace FirstOOPPropgramm
     {
         public static int FindMin(int[,] arr)
         {
-            if (arr == null)
+            if (arr.Length == 0)
             {
                 throw new Exception("arr can't be null");
             }
@@ -33,7 +33,7 @@ namespace FirstOOPPropgramm
 
         public static int FindMax(int[,] arr)
         {
-            if (arr == null)
+            if (arr.Length == 0)
             {
                 throw new Exception("arr can't be null");
             }
@@ -56,7 +56,7 @@ namespace FirstOOPPropgramm
 
         public static int[] FindIndexOfMin(int[,] arr)
         {
-            if (arr == null)
+            if (arr.Length == 0)
             {
                 throw new Exception("arr can't be null");
             }
@@ -80,7 +80,7 @@ namespace FirstOOPPropgramm
 
         public static int[] FindIndexOfMax(int[,] arr)
         {
-            if (arr == null)
+            if (arr.Length == 0)
             {
                 throw new Exception("arr can't be null");
             }
@@ -104,11 +104,6 @@ namespace FirstOOPPropgramm
 
         public static int FindQuantityOfElementsWhichMoreThanNeighbours(int[,] arr)
         {
-            if (arr == null)
-            {
-                throw new Exception("arr can't be null");
-            }
-
             int quantity = 0;
 
             int[,] newArr = EncircleByZero(arr);
@@ -129,13 +124,12 @@ namespace FirstOOPPropgramm
 
         public static int[,] Swap(int[,] arr)
         {
-            if (arr == null)
+            if (arr.Length == 0)
             {
                 throw new Exception("arr can't be null");
             }
 
             int[,] newArr = Copy(arr);
-            int check = 0;
 
             for (int i = 0; i < newArr.GetLength(1); i++)
             {
@@ -150,7 +144,7 @@ namespace FirstOOPPropgramm
 
         static int[,] Copy(int[,] arr)
         {
-            if (arr == null)
+            if (arr.Length == 0)
             {
                 throw new Exception("arr can't be null");
             }
@@ -162,7 +156,7 @@ namespace FirstOOPPropgramm
 
         static int[,] EncircleByZero(int[,] arr)
         {
-            if (arr == null)
+            if (arr.Length == 0)
             {
                 throw new Exception("arr can't be null");
             }
@@ -203,7 +197,7 @@ namespace FirstOOPPropgramm
         
         public static void Show(int[,] arr)
         {
-            if (arr == null)
+            if (arr.Length == 0)
             {
                 throw new Exception("arr can't be null");
             }
