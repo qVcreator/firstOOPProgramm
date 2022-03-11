@@ -1,18 +1,16 @@
 using NUnit.Framework;
+using System;
+using FirstOOPPropgramm;
 
 namespace FirstOOPProgramm.Test
 {
-    public class Tests
+    public class Homework1Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
 
         [Test]
-        public void Test1()
+        public void GetSolutionTest(double a, double b, double expected)
         {
-            Assert.Pass();
+            double actual = FirstOOPPropgramm.Homework1
         }
     }
 }
