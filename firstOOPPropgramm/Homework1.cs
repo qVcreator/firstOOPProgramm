@@ -23,9 +23,9 @@ namespace FirstOOPPropgramm
 
         public static int GetSolveOfLinearEquation(int a, int b, int c)
         {
-            if (a == 0)
+            if (a == 0 || b ==0 || c == 0)
             {
-                throw new Exception("<a> can't be equal 0");
+                throw new Exception("arguments can't be equal 0");
             }
             else
             {
@@ -41,30 +41,25 @@ namespace FirstOOPPropgramm
             {
                 throw new Exception("<x1> can't be equal <x2>");
             }
+            else if (y1 == y2)
+            {
+                throw new Exception("<y1> can't be equal <y2>");
+            }
             else
             {
-                double tmp1 = (double)(y1 - y2) / (x2 - x1);
-                double tmp2 = (double)((y2 - y1) * x1) / (x2 - x1);
-                tmp1 *= -1;
-                tmp2 += -1;
+                double tmp1 = ((double)(y1 - y2) / (x2 - x1))*-1;
+                double tmp2 = ((double)((x1*y2) - (x2*y1))/(x2-x1))*-1;
 
                 string res = "";
 
-                if (tmp2 == 0 && tmp1 == 0)
+                
+                if (tmp2 == 0)
                 {
-                    res = "Y = 0";
-                }
-                else if (tmp2 == 0)
-                {
-                    res = $"Y = {tmp1}X";
-                }
-                else if (tmp1 == 0)
-                {
-                    res = $"Y = {tmp2}";
+                    res = $"y = {tmp1}x";
                 }
                 else
                 {
-                    res = $"Y = {tmp1}x + {tmp2}";
+                    res = $"y = {tmp1}x + {tmp2}";
                 }
 
                 return res;

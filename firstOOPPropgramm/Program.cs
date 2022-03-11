@@ -1,7 +1,6 @@
 ﻿using FirstOOPPropgramm;
-
-int a = 64;
-Console.WriteLine(FirstOOPPropgramm.Homework3.FindLessThanSqureOfNum(a));
+string res = FirstOOPPropgramm.Homework1.GetEquationOfStraightLine(-1, 2, -2, 1);
+Console.Write(res);
 
 //string actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
 //bool isKeepWork = true;
