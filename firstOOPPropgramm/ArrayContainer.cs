@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FirstOOPPropgramm
 {
-    static class ArrayContainer
+    public static class ArrayContainer
     {
         public static int FindMin(int[] arr)
         {
@@ -167,10 +167,6 @@ namespace FirstOOPPropgramm
         }
         public static int[] BubbleSort(int[] arr)
         {
-            if (arr.Length == 0)
-            {
-                throw new Exception("arr can't be null");
-            }
             int[] tmpArr = CopyArray(arr);
 
             for (int i = 0; i < tmpArr.Length - 1; i++)
@@ -189,10 +185,6 @@ namespace FirstOOPPropgramm
 
         public static int[] SelectionSort(int[] arr)
         {
-            if (arr.Length == 0)
-            {
-                throw new Exception("arr can't be null");
-            }
             int[] tmpArr = CopyArray(arr);
 
             for (int i = 0; i < tmpArr.Length; i++)
@@ -212,10 +204,6 @@ namespace FirstOOPPropgramm
         }
         public static int[] InsertionSort(int[] arr)
         {
-            if (arr.Length == 0)
-            {
-                throw new Exception("arr can't be null");
-            }
             int[] tmpArr = CopyArray(arr);
             for (int i = 1; i < arr.Length; i++)
             {
@@ -232,13 +220,7 @@ namespace FirstOOPPropgramm
 
         public static int[] CountSort(int[] arr)
         {
-            if (arr.Length == 0)
-            {
-                throw new Exception("arr can't be null");
-            }
             int[] tmpArr = new int[arr.Length];
-
-
 
             for (int i = 0; i < arr.Length; i++)
             {
