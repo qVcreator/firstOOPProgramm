@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FirstOOPPropgramm
 {
-    static class Homework3
+    public static class Homework3
     {
         public static int AscensionToTheDegree(int a, int b)
         {
@@ -33,7 +33,7 @@ namespace FirstOOPPropgramm
         public static int FindLessThanSqureOfNum(int a)
         {
             int check = 0;
-            for (int i = 1; i*i < a; i++)
+            for (int i = 1; i*i < Math.Abs(a); i++)
             {
                 check++;
             }
@@ -41,15 +41,22 @@ namespace FirstOOPPropgramm
         }
         public static int FindTheBiggestDevider(int a)
         {
-            int devider = a - 1;
+            int devider = Math.Abs(a) - 1;
             if (devider == 0)
             {
                 throw new Exception("devider can't be zero");
             }
-            while (a % devider != 0)
+            if (a == 0)
             {
-                devider--;
+                devider = 1;
             }
+            else
+            {
+                while (Math.Abs(a) % devider != 0)
+                {
+                    devider--;
+                }
+            }            
             return devider;
         }
         public static int GetSummInRangeOfNumbersWhichDevidesBySeven(int a, int b)
@@ -72,7 +79,7 @@ namespace FirstOOPPropgramm
         }
         public static int GetNumberOfFibonacciSeries(int num)
         {
-            if (num <= 0)
+            if (num < 1)
             {
                 throw new Exception("Num have to be more than zero");
             }
@@ -94,6 +101,8 @@ namespace FirstOOPPropgramm
         }
         public static int GetСommonDivisorOfTwoNumbersByEuclidsAlgoritm(int num1, int num2)
         {
+            num1 = Math.Abs(num1);
+            num2 =Math.Abs(num2);   
             while (num1 != num2)
             {
                 if (num1 > num2)
@@ -102,7 +111,7 @@ namespace FirstOOPPropgramm
                 }
                 else
                 {
-                    num2 -= num1;
+                    num2 -= num1;                    
                 }
             }
             return num1;
@@ -203,41 +212,12 @@ namespace FirstOOPPropgramm
             }
             return arr;
         }
-        
-        static int CountItemsForCreatingArr(int num)
-        {
-            int count = 0;
-            int tmp1 = 1;
-            while (tmp1 <= num)
-            {
-                int even = 0;
-                int odd = 0;
-                int tmp2 = tmp1;
-                while (tmp2 != 0)
-                {
-                    if (tmp2 % 2 == 0)
-                    {
-                        even += tmp2 % 10;
-                    }
-                    else
-                    {
-                        odd += tmp2 % 10;
-                    }
-                    tmp2 /= 10;
-                }
-                if (even > odd)
-                {
-                    count++;
-                }
-                tmp1++;
-            }
-            return count;
-        }
+
         public static int[] GetNumbersInRangeFromOneToChoosenNumWhereSumOfEvenMoreThanSumOfOdd(int num)
         {
             if (num < 1)
             {
-                throw new Exception("num > 1");
+                throw new Exception("num should be > 1");
             }
 
             int arrLenght = CountItemsForCreatingArr(num);
@@ -279,6 +259,36 @@ namespace FirstOOPPropgramm
             {
                 Console.Write($"{item} ");
             }
+        }
+
+        static int CountItemsForCreatingArr(int num)
+        {
+            int count = 0;
+            int tmp1 = 1;
+            while (tmp1 <= num)
+            {
+                int even = 0;
+                int odd = 0;
+                int tmp2 = tmp1;
+                while (tmp2 != 0)
+                {
+                    if (tmp2 % 2 == 0)
+                    {
+                        even += tmp2 % 10;
+                    }
+                    else
+                    {
+                        odd += tmp2 % 10;
+                    }
+                    tmp2 /= 10;
+                }
+                if (even > odd)
+                {
+                    count++;
+                }
+                tmp1++;
+            }
+            return count;
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FirstOOPPropgramm
 {
-    static class Homework2
+    public static class Homework2
     {
         public static int DoMathIfBool(int a, int b)
         {
@@ -37,19 +37,19 @@ namespace FirstOOPPropgramm
             }
             else if (x > 0 && y > 0)
             {
-                res = "Точка в 1-ой четверти";
+                res = "I";
             }
             else if (x < 0 && y > 0)
             {
-                res = "Точка в 2-ой четверти";
+                res = "II";
             }
             else if (x < 0 && y < 0)
             {
-                res = "Точка в 3-ой четверти";
+                res = "III";
             }
             else if (x > 0 && y < 0)
             {
-                res = "Точка в 4-ой четверти";
+                res = "IV";
             }
             return res;
         }
@@ -60,10 +60,11 @@ namespace FirstOOPPropgramm
             string secondWord = "";
             string res = "";
 
-            if ((num > -9 && num < 9) || (num < -99 && num > 99))
+            if ((num >= -9 && num <= 9) || (num < -99 || num > 99))
             {
                 throw new Exception("Number is not in raange");
             }
+
             if (num < 0)
             {
                 num *= -1;
@@ -134,9 +135,6 @@ namespace FirstOOPPropgramm
                     case 90:
                         firstWord = "Девяносто";
                         break;
-                    default:
-                        firstWord = "Ops! Something went wrong.";
-                        break;
                 }
                 switch (num % 10)
                 {
@@ -169,9 +167,6 @@ namespace FirstOOPPropgramm
                         break;
                     case 9:
                         secondWord = "девять";
-                        break;
-                    default:
-                        secondWord = "";
                         break;
                 }
                 res = $"{isMinus}{firstWord} {secondWord}";
@@ -261,14 +256,7 @@ namespace FirstOOPPropgramm
 
         static double FindDiscriminant(int a, int b, int c)
         {
-            if ((b * b - 4 * a * c) < 0)
-            {
-                throw new Exception("Discriminant can't be zero");
-            }
-            else
-            {
-                return b * b - 4 * a * c;
-            }
+            return b * b - 4 * a * c;
         }
 
         static void PullInToArray(int less, int  mid, int biggest, int[] arr)

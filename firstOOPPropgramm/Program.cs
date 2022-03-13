@@ -1,5 +1,5 @@
 ﻿using FirstOOPPropgramm;
-string res = FirstOOPPropgramm.Homework1.GetEquationOfStraightLine(-1, 2, -2, 1);
+int res = FirstOOPPropgramm.Homework3.GetСommonDivisorOfTwoNumbersByEuclidsAlgoritm(-36, 18);
 Console.Write(res);
 
 //string actualTask = FirstOOPPropgramm.UserInterface.ChooseTask();
