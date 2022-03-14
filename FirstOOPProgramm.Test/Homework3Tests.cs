@@ -131,11 +131,14 @@ namespace FirstOOPPropgramm.Test
             Assert.AreEqual(expected,actual);
         }
 
-        //public void GetArrayFromOneToOneThousandOfNumbersWhichDevidesOnChoosenNumTest(int num, int[] expected)
-        //{
-        //    int[] actual = Homework3.GetArrayFromOneToOneThousandOfNumbersWhichDevidesOnChoosenNum(num);
-        //    Assert.AreEqual(expected, actual);
-        //}
+        [TestCase(500, new int[] {500, 1000})]
+        [TestCase(250, new int[] {250, 500, 750, 1000})]
+        [TestCase(200, new int[] {200, 400, 600, 800, 1000})]
+        public void GetArrayFromOneToOneThousandOfNumbersWhichDevidesOnChoosenNumTest(int num, int[] expected)
+        {
+            int[] actual = Homework3.GetArrayFromOneToOneThousandOfNumbersWhichDevidesOnChoosenNum(num);
+            Assert.AreEqual(expected, actual);
+        }
 
         [TestCase(10, new int[] {2,4,6,8,})]
         [TestCase(20, new int[] {2,4,6,8,12,14,16,18,20})]

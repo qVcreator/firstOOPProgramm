@@ -199,13 +199,13 @@ namespace FirstOOPPropgramm
                 throw new Exception("Number is not in range");
             }
             int count = 0;
-            for (int i = num; i < 1000; i += num)
+            for (int i = num; i <= 1000; i += num)
             {
                 count++;
             }
             int index = 0;
             int[] arr = new int[count];
-            for (int i = num; i < 1000; i += num)
+            for (int i = num; i <= 1000; i += num)
             {
                 arr[index] = i;
                 index++;
