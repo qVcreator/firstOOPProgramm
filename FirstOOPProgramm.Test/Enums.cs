@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FirstOOPProgramm.Test
+namespace FirstOOPPropgramm.Test
 {
     public static class Enums
     {
