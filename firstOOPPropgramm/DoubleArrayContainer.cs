@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FirstOOPPropgramm
 {
-    internal class DoubleArrayContainer
+    public class DoubleArrayContainer
     {
         public static int FindMin(int[,] arr)
         {

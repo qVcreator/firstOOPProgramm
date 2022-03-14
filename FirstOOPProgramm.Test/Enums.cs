@@ -10,7 +10,10 @@ namespace FirstOOPPropgramm.Test
     {
         public enum TwoDimensionalArraay
         {
-           
+           first,
+           second,
+           oneOnly,
+           empty
         }
     }
 }
