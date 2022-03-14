@@ -104,15 +104,23 @@ namespace FirstOOPPropgramm
 
         public static int FindQuantityOfElementsWhichMoreThanNeighbours(int[,] arr)
         {
+            if (arr.Length == 0)
+            {
+                throw new Exception("arr can't be null");
+            }
+
             int quantity = 0;
 
-            int[,] newArr = EncircleByZero(arr);
+            int[,] newArr = Copy(arr);
 
-            for (int i = 1; i < newArr.GetLength(0)-1; i++)
+            for (int i = 0; i < newArr.GetLength(0); i++)
             {
-                for (int j = 1; j < newArr.GetLength(1)-1; j++)
+                for (int j = 0; j < newArr.GetLength(1); j++)
                 {
-                    if ((newArr[i, j] > newArr[i + 1, j]) && (newArr[i, j] > newArr[i - 1, j]) && (newArr[i, j] > newArr[i, j + 1]) && newArr[i, j] > newArr[i, j - 1])
+                    if ((i == 0 || arr[i, j] > arr[i - 1, j])
+                        && (j == 0 || arr[i, j] > arr[i, j - 1])
+                        && (i == arr.GetLength(0) - 1 || arr[i, j] > arr[i + 1, j])
+                        && (j == arr.GetLength(1) - 1 || arr[i, j] > arr[i, j + 1]))
                     {
                         quantity++;
                     }

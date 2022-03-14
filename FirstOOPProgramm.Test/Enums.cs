@@ -13,6 +13,9 @@ namespace FirstOOPPropgramm.Test
            first,
            second,
            oneOnly,
+           firstSwap,
+           secondSwap,
+           oneOnlySwap,
            empty
         }
     }
